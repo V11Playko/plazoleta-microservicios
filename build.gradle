@@ -46,7 +46,6 @@ dependencies {
 
 	implementation "org.springdoc:springdoc-openapi-ui:${openApiVersion}"
 	implementation "org.springdoc:springdoc-openapi-webflux-ui:${openApiVersion}"
-	implementation "org.springframework.boot:spring-boot-starter-validation:${starterValidation}"
 }
 
 tasks.named('test') {

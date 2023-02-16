@@ -4,12 +4,13 @@ public class UserModel {
     private Long idUser;
     private String nameUser;
     private String lastNameUser;
-    private Long DNI;
+    private String DNI;
     private String phone;
     private String email;
     private String password;
+    private Long rol_Id;
 
-    public UserModel(Long idUser, String nameUser, String lastNameUser, Long DNI, String phone, String email, String password) {
+    public UserModel(Long idUser, String nameUser, String lastNameUser, String DNI, String phone, String email, String password, Long rol_Id) {
         this.idUser = idUser;
         this.nameUser = nameUser;
         this.lastNameUser = lastNameUser;
@@ -17,6 +18,7 @@ public class UserModel {
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.rol_Id = rol_Id;
     }
 
     public Long getIdUser() {
@@ -43,11 +45,11 @@ public class UserModel {
         this.lastNameUser = lastNameUser;
     }
 
-    public Long getDNI() {
+    public String getDNI() {
         return DNI;
     }
 
-    public void setDNI(Long DNI) {
+    public void setDNI(String DNI) {
         this.DNI = DNI;
     }
 
@@ -73,5 +75,13 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Long getRol_Id() {
+        return rol_Id;
+    }
+
+    public void setRol_Id(Long rol_Id) {
+        this.rol_Id = rol_Id;
     }
 }
