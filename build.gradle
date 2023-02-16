@@ -26,6 +26,7 @@ ext {
 	lombokMapstructBindingVersion = "0.2.0"
 	mySqlConnectorVersion = "8.0.32"
 	openApiVersion = "1.6.11"
+	starterValidation = "3.0.2"
 }
 
 dependencies {
@@ -45,6 +46,7 @@ dependencies {
 
 	implementation "org.springdoc:springdoc-openapi-ui:${openApiVersion}"
 	implementation "org.springdoc:springdoc-openapi-webflux-ui:${openApiVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-validation:${starterValidation}"
 }
 
 tasks.named('test') {
