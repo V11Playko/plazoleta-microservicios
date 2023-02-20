@@ -1,24 +1,32 @@
 package com.pragma.powerup.domain.model;
 
+
+import org.mindrot.jbcrypt.BCrypt;
+
 public class UserModel {
     private Long idUser;
-    private String nameUser;
-    private String lastNameUser;
-    private String DNI;
+    private String firstName;
+    private String lastName;
+    private String Dni;
     private String phone;
     private String email;
     private String password;
-    private Long rol_Id;
+    private RolModel role;
 
-    public UserModel(Long idUser, String nameUser, String lastNameUser, String DNI, String phone, String email, String password, Long rol_Id) {
+    public String HashedPassword(String password) {
+        String hashedPassword = BCrypt.hashpw(this.password, BCrypt.gensalt());
+        return hashedPassword;
+    }
+
+    public UserModel(Long idUser, String firstName, String lastName, String dni, String phone, String email, String password, RolModel role) {
         this.idUser = idUser;
-        this.nameUser = nameUser;
-        this.lastNameUser = lastNameUser;
-        this.DNI = DNI;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.Dni = dni;
         this.phone = phone;
         this.email = email;
-        this.password = password;
-        this.rol_Id = rol_Id;
+        this.password = HashedPassword(password);
+        this.role = role;
     }
 
     public Long getIdUser() {
@@ -29,28 +37,28 @@ public class UserModel {
         this.idUser = idUser;
     }
 
-    public String getNameUser() {
-        return nameUser;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastNameUser() {
-        return lastNameUser;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastNameUser(String lastNameUser) {
-        this.lastNameUser = lastNameUser;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getDNI() {
-        return DNI;
+    public String getDni() {
+        return Dni;
     }
 
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
+    public void setDni(String dni) {
+        Dni = dni;
     }
 
     public String getPhone() {
@@ -77,11 +85,11 @@ public class UserModel {
         this.password = password;
     }
 
-    public Long getRol_Id() {
-        return rol_Id;
+    public RolModel getRole() {
+        return role;
     }
 
-    public void setRol_Id(Long rol_Id) {
-        this.rol_Id = rol_Id;
+    public void setRole(RolModel role) {
+        this.role = role;
     }
 }

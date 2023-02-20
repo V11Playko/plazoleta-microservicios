@@ -2,37 +2,37 @@ package com.pragma.powerup.domain.model;
 
 
 public class RolModel {
-    private Long id_rol;
-    private String name_rol;
-    private String description_rol;
+    private Long idRole;
+    private String nameRole;
+    private String descriptionRole;
 
-    public RolModel(Long id_rol, String name_rol, String description_rol) {
-        this.id_rol = id_rol;
-        this.name_rol = name_rol;
-        this.description_rol = description_rol;
+    public RolModel(Long idRole, String nameRole, String descriptionRole) {
+        this.idRole = idRole;
+        this.nameRole = nameRole;
+        this.descriptionRole = descriptionRole;
     }
 
-    public Long getId_rol() {
-        return id_rol;
+    public Long getIdRole() {
+        return idRole;
     }
 
-    public void setId_rol(Long id_rol) {
-        this.id_rol = id_rol;
+    public void setIdRole(Long idRole) {
+        this.idRole = idRole;
     }
 
-    public String getName_rol() {
-        return name_rol;
+    public String getNameRole() {
+        return nameRole;
     }
 
-    public void setName_rol(String name_rol) {
-        this.name_rol = name_rol;
+    public void setNameRole(String nameRole) {
+        this.nameRole = nameRole;
     }
 
-    public String getDescription_rol() {
-        return description_rol;
+    public String getDescriptionRole() {
+        return descriptionRole;
     }
 
-    public void setDescription_rol(String description_rol) {
-        this.description_rol = description_rol;
+    public void setDescriptionRole(String descriptionRole) {
+        this.descriptionRole = descriptionRole;
     }
 }
