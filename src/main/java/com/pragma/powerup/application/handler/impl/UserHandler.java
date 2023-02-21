@@ -6,6 +6,7 @@ import com.pragma.powerup.application.handler.IUserHandler;
 import com.pragma.powerup.application.mapper.IUserRequestMapper;
 import com.pragma.powerup.application.mapper.IUserResponseMapper;
 import com.pragma.powerup.domain.api.IUserServicePort;
+import com.pragma.powerup.domain.model.UserModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
@@ -21,7 +22,8 @@ public class UserHandler implements IUserHandler {
     private final IUserResponseMapper userResponseMapper;
     @Override
     public void saveUser(UserRequestDto userRequestDto) {
-        userServicePort.saveUser(userRequestMapper.toUserRequest(userRequestDto));
+        UserModel userModel = userRequestMapper.toUserRequest(userRequestDto);
+        userServicePort.saveUser(userModel);
     }
 
     @Override

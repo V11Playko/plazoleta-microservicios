@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -24,9 +25,11 @@ public class UserEntity implements Serializable {
     private Long idUser;
 
     @Column( name = "nombre", length = 50)
+    @NotNull
     private String firstName;
 
     @Column( name = "apellido", length = 50)
+    @NotNull
     private String lastName;
 
     @Column( name = "Dni", length = 50)
