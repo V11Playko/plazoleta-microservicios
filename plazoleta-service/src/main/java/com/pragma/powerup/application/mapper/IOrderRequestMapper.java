@@ -10,5 +10,5 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface IOrderRequestMapper {
-    OrderModel toOrderRequest(OrderRequestDto orderRequestDto);
+    OrderModel toOrderRequest(OrderRequestDto  order);
 }

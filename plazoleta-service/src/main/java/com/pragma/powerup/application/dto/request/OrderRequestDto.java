@@ -14,5 +14,12 @@ public class OrderRequestDto {
     private String dateOrder;
     private String stateOrder;
     private String idChef;
-    private RestaurantModel restaurantOrder;
+    private RestaurantModel idRestaurant;
+    // restaurant
+//    private String nameRestaurant;
+//    private String addressRestaurant;
+//    private String idOwner;
+//    private String phoneRestaurant;
+//    private String urlLogo;
+//    private String nit;
 }

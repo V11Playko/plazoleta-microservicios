@@ -9,5 +9,6 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface IRestaurantRequestMapper {
-    RestaurantModel toRestaurantRequest(RestaurantRequestDto restaurantRequestDto);
+
+    RestaurantModel toRestaurantRequest(RestaurantRequestDto restaurant);
 }
