@@ -15,16 +15,12 @@ public class DishRequestDto {
     private String descriptionDish;
     private String priceDish;
     private RestaurantModel restaurantDish;
-    // restaurant
-
-//    private String nameRestaurant;
-//    private String addressRestaurant;
-//    private String idOwner;
-//    private String phoneRestaurant;
-//    private String urlLogo;
-//    private String nit;
-
-    // dish
     private String urlImageDish;
     private String stateDish;
+    //OrderDish
+    private Long idOrderDish;
+    private String amount;
+    // CategoryDish
+    private String nameCategory;
+    private String descriptionCategory;
 }

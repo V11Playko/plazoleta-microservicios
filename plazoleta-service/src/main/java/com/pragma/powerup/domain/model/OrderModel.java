@@ -1,14 +1,14 @@
 package com.pragma.powerup.domain.model;
 
 public class OrderModel {
-    private Long idOrder;
+    private OrdersDishesModel idOrder;
     private String idClient;
     private String dateOrder;
     private String stateOrder;
     private String idChef;
     private RestaurantModel restaurantOrder;
 
-    public OrderModel(Long idOrder, String idClient, String dateOrder, String stateOrder, String idChef, RestaurantModel restaurantOrder) {
+    public OrderModel(OrdersDishesModel idOrder, String idClient, String dateOrder, String stateOrder, String idChef, RestaurantModel restaurantOrder) {
         this.idOrder = idOrder;
         this.idClient = idClient;
         this.dateOrder = dateOrder;
@@ -17,11 +17,11 @@ public class OrderModel {
         this.restaurantOrder = restaurantOrder;
     }
 
-    public Long getIdOrder() {
+    public OrdersDishesModel getIdOrder() {
         return idOrder;
     }
 
-    public void setIdOrder(Long idOrder) {
+    public void setIdOrder(OrdersDishesModel idOrder) {
         this.idOrder = idOrder;
     }
 
