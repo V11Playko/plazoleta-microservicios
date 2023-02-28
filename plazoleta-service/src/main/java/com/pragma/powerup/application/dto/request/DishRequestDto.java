@@ -1,5 +1,7 @@
 package com.pragma.powerup.application.dto.request;
 
+import com.pragma.powerup.domain.model.CategoryDishModel;
+import com.pragma.powerup.domain.model.OrdersDishesModel;
 import com.pragma.powerup.domain.model.RestaurantModel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,18 +11,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class DishRequestDto {
-    private Long idDish;
+    //OrderDish
+    private Long idOrderDish;
+    private String amount;
+    // ----------------------
     private String nameDish;
-    private String idCategory;
+    // CategoryDish
+    private String nameCategory;
+    private String descriptionCategory;
+    // ----------------------
     private String descriptionDish;
     private String priceDish;
     private RestaurantModel restaurantDish;
     private String urlImageDish;
     private String stateDish;
-    //OrderDish
-    private Long idOrderDish;
-    private String amount;
-    // CategoryDish
-    private String nameCategory;
-    private String descriptionCategory;
 }

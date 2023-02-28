@@ -5,10 +5,10 @@ public class OrderModel {
     private String idClient;
     private String dateOrder;
     private String stateOrder;
-    private String idChef;
+    private RestaurantEmployeeModel idChef;
     private RestaurantModel restaurantOrder;
 
-    public OrderModel(OrdersDishesModel idOrder, String idClient, String dateOrder, String stateOrder, String idChef, RestaurantModel restaurantOrder) {
+    public OrderModel(OrdersDishesModel idOrder, String idClient, String dateOrder, String stateOrder, RestaurantEmployeeModel idChef, RestaurantModel restaurantOrder) {
         this.idOrder = idOrder;
         this.idClient = idClient;
         this.dateOrder = dateOrder;
@@ -49,11 +49,11 @@ public class OrderModel {
         this.stateOrder = stateOrder;
     }
 
-    public String getIdChef() {
+    public RestaurantEmployeeModel getIdChef() {
         return idChef;
     }
 
-    public void setIdChef(String idChef) {
+    public void setIdChef(RestaurantEmployeeModel idChef) {
         this.idChef = idChef;
     }
 

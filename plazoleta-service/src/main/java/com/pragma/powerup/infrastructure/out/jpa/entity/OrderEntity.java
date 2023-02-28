@@ -23,12 +23,16 @@ public class OrderEntity implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idOrder;
+    @OneToMany(mappedBy = "order")
+    @JoinColumn(name = "id_DishOrder")
+    private OrderEntity idOrder;
     private String idClient;
     private String dateOrder;
     private String stateOrder;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY )
+    @JoinColumn(name = "id_chef")
     private String idChef;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY )
     @JoinColumn(name = "id_restaurantt")
     private RestaurantEntity idRestaurant;
 }

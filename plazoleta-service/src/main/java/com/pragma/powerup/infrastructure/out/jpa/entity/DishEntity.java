@@ -1,7 +1,5 @@
 package com.pragma.powerup.infrastructure.out.jpa.entity;
 
-import com.pragma.powerup.domain.model.CategoryDishModel;
-import com.pragma.powerup.domain.model.OrdersDishesModel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,9 +19,13 @@ public class DishEntity implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private OrdersDishesModel idDish;
+    @OneToMany(mappedBy = "dish", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "idOrderDish")
+    private OrdersDishesEntity idDish;
     private String nameDish;
-    private CategoryDishModel idCategory;
+    @OneToMany(mappedBy = "dish", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "idCategory")
+    private CategoryDishEntity id_category;
     private String descriptionDish;
     private String priceDish;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -31,4 +33,12 @@ public class DishEntity implements Serializable {
     private RestaurantEntity restaurantDish;
     private String urlImageDish;
     private String stateDish;
+
+    public OrdersDishesEntity getIdDish() {
+        return idDish;
+    }
+
+    public void setIdDish(OrdersDishesEntity idDish) {
+        this.idDish = idDish;
+    }
 }

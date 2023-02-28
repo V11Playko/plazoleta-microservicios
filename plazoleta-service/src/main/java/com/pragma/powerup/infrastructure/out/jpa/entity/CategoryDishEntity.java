@@ -19,7 +19,8 @@ public class CategoryDishEntity implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCategoryDishes;
+    private DishEntity idCategoryDishes;
     private String nameCategory;
     private String descriptionCategory;
+
 }
