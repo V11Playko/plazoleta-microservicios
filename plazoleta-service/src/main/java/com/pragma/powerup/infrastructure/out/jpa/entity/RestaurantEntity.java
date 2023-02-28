@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +23,5 @@ public class RestaurantEntity implements Serializable {
     private String phone;
     private String urlLogo;
     private String nit;
+    private List<DishEntity> dishes;
 }
